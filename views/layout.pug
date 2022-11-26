@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    div(class="container")
+      div(class="row")
+        div(class="column")
+          block sidebar
+            ul(class="sidebar-nav")
+              li
+                a(href='/shop') Home
+              hr
+              li 
+                a(href="/shop/items/create") Create New Item
+              li
+                a(href='/shop/category/create') Create New Category
+              //-   a(href='/shop/protein-shakes/create') Create New Protein Shake
+              //- li 
+              //-   a(href='/shop/protein-bars/create') Create New Protein Bar
+              //- li 
+              //-   a(href='/shop/creatine/create') Create New Creatine
+              //- li
+              //-   a(href='/shop/shaker-bottles/create') Create New Shaker Bottle
+        div(class='column')
+          block content

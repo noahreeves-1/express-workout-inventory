@@ -1,0 +1,53 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  max-width: 930px;
+}
+
+a {
+  color: #00b7ff;
+}
+
+ul {
+  padding: 0;
+  margin: 20px 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.column {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.sidebar-nav {
+  width: 150px;
+}
+
+.all-categories {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.all-categories > a {
+  text-decoration: none;
+}
+
+.category-box {
+  background-color: aliceblue;
+  width: 150px;
+  padding: 80px 0px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.link-category {
+  text-decoration: none;
+}

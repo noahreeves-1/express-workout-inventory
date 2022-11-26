@@ -1,0 +1,36 @@
+extends layout 
+
+block content 
+  h1= title
+
+  form(method='POST' action='' enctype='multipart/form-data')
+    div.form-group
+      label(for='name') Name:
+      input#name.form-control(type='text' placeholder='Optimum Nutrition Whey Gold Standard' name='name' required='true' value=(item === undefined ? '' : item.name))
+    div.form-group
+      label(for='description') Description:
+      input#description.form-control(type='text' placeholder='This item is...' name='description' required='true' value=(item === undefined ? '' : item.description))
+    div.form-group
+      label(for='price') Price:
+      input#price.form-control(type='text' placeholder="0.00" name='price' required='true' value=(item === undefined ? '' : item.price))
+    div.form-group
+      label(for='number_in_stock') Number in Stock: 
+      input#number_in_stock.form-control(type='' placeholder='' name='' value=(item===undefined ? '' : item.number_in_stock))
+    div.form-group
+      label Category:
+      div 
+        for category in categories
+          div(style="display: inline; padding-right: 10px;")
+            input.checkbox-input(type='checkbox', name='category', id=category._id, value=category._id, checked=category.checked)
+            label(for=category._id) #{category.name}
+    div.form-group
+      label(for='weight') Weight: 
+      input#weight.form-control(type='text' placeholder='64' name='weight' value=(item === undefined ? '' : item.weight))
+    div.form-group
+      label(for="image") Upload Image
+      input#input(type='file' name='image' required="false")
+    button.btn(type='submit') Submit
+  if errors
+    ul 
+      for error in errors
+        li!= error.msg

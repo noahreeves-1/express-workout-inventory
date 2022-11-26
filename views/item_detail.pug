@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+  h1= title
+  -const image= item.image
+  img(src=image)
+
+  each category in categories 
+    a(class="link-category" href=category.url) #{category.name} 
+  p= item.description
+  h2 $#{item.price}
+  p Number in stock: #{item.number_in_stock}
+  p #{item.weight} ounces 
+
+  p 
+    a(href = `/shop/${categories[0].name}/${item._id}/delete`) Delete Item 
+  p 
+    a(href = `/shop/${categories[0].name}/${item._id}/update`) Update Item
+  

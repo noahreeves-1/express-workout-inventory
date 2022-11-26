@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+  h1= title
+  ul 
+    each item in list_items
+      li
+        a(href=`/shop/${item.category[0].name}/${item._id}`) #{item.name}
+    else 
+      li There are no items
+  br
+  a(href= category.url + "/delete") Delete Category
+  br
+  a(href= category.url +"/update" + "/" + category._id ) Update Category

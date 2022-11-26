@@ -1,0 +1,1 @@
+mongodb+srv://noahkim:noahkimpassword@cluster0.khdciow.mongodb.net/inventory_management?retryWrites=true&w=majority

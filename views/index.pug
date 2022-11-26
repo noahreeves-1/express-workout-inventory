@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}!
+
+  h2 Categories
+  
+  ul(class="all-categories")
+    each category in category_list
+      a(href=category.url)
+        li(class="category-box") #{category.name}
+           
+    else
+      li There are no categories
+
+  h3 About Us
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo, sapien in accumsan convallis, felis dolor rhoncus eros, euismod viverra purus libero ut mauris. Fusce at est velit. Proin nisl lectus, mollis eu pellentesque egestas, dictum sed odio. Nam porttitor sit amet orci quis efficitur. Integer dapibus, quam sed tempor bibendum, ipsum libero feugiat quam, et malesuada nunc urna sit amet ex. Integer ac urna lobortis, ultricies mauris vel, scelerisque est. Curabitur congue, augue ut iaculis pellentesque, metus enim bibendum nisl, sed malesuada velit dolor sed nulla.
+
+  h3 Contact Us
+  p #[strong Phone: ] (123) 456-7890
+  p #[strong Email: ] customerservice@beastscave.biz
+  p #[strong Address: ] 1234 Street, City, ST, 56789
