@@ -13,15 +13,12 @@ const bodyParser = require("body-parser");
 const app = express();
 
 const mongoose = require("mongoose");
-// const mongoDB =
-//   "mongodb+srv://noahkim:noahkimpassword@cluster0.khdciow.mongodb.net/inventory_management?retryWrites=true&w=majority";
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
