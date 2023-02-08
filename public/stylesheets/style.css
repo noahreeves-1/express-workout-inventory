@@ -5,10 +5,6 @@ body {
   max-width: 930px;
 }
 
-a {
-  color: #00b7ff;
-}
-
 ul {
   padding: 0;
   margin: 20px 0px;
@@ -16,6 +12,12 @@ ul {
 
 li {
   list-style: none;
+}
+
+.sidebar-column {
+  padding: 20px;
+  background-color: rgb(50, 157, 234);
+  height: 100vh;
 }
 
 .column {
@@ -28,6 +30,16 @@ li {
 
 .sidebar-nav {
   width: 150px;
+}
+
+.sidebar-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.landing-image {
+  width: 100%;
+  /* border-radius: 5%; */
 }
 
 .all-categories {
@@ -50,4 +62,27 @@ li {
 
 .link-category {
   text-decoration: none;
+}
+
+.item-form {
+  background-color: rgb(72, 158, 233);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.category-form {
+  background-color: rgb(72, 158, 233);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.form-group label {
+  color: white;
+}
+
+.form-group input {
+  width: 100%;
+  border-radius: 5%;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }

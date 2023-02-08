@@ -4,7 +4,7 @@ block content
 
   h1= title
 
-  form(method="POST" action="")
+  form.category-form(method="POST" action="")
     div.form-group 
       label(for='name') Name: 
       input#name.form-control(type='text', placeholder='Protein Shakes, Energy Drinks, etc.' name='name' value=(category === undefined ? '' : category.name))

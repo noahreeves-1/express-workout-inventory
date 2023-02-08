@@ -7,13 +7,13 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const shopRouter = require("./routes/shop");
-require("dotenv/config");
+require("dotenv").config();
 const bodyParser = require("body-parser");
 
 const app = express();
 
 const mongoose = require("mongoose");
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
